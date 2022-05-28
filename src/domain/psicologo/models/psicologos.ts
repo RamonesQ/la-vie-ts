@@ -1,4 +1,5 @@
-const db = require("../database");
+const db = require("../../../infrastructure/database");
+
 const { DataTypes } = require("sequelize");
 
 export const Psicologos = db.define(

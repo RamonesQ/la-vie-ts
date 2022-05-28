@@ -23,6 +23,7 @@ class ViaCep {
     }
     getAddress(bodyValue) {
         return __awaiter(this, void 0, void 0, function* () {
+            // this.api.get('ws/' + bodyValue + 'json/')
             let response = yield this.api.get(`ws/${bodyValue}/json/`);
             return response;
         });

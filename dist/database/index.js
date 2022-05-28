@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const Sequelize = require("sequelize");
-const DB_NAME = "lavie";
+const DB_NAME = "la-vie";
 const DB_USER = "root";
 const DB_PASS = "";
 const DB_CONFIG = {

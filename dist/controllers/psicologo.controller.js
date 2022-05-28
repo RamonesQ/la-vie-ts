@@ -21,7 +21,7 @@ exports.PsicologoController = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { senha, cep } = req.body;
-                const bairro = yield viaCep_1.ViaCepApi.getAddress(cep);
+                const bairro = yield viaCep_1.viaCepApi.getAddress(cep);
                 res.send(bairro);
                 const newSenha = bcryptjs_1.default.hashSync(senha, 10);
                 const newPsicologo = yield psicologos_1.Psicologos.create(Object.assign(Object.assign({}, req.body), { senha: newSenha }));
