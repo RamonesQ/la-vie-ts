@@ -1,5 +1,4 @@
 const db = require("../../../infrastructure/database");
-
 const { DataTypes } = require("sequelize");
 
 export const Psicologos = db.define(
@@ -28,9 +27,9 @@ export const Psicologos = db.define(
     updatedAt: {
       type: DataTypes.DATE,
     },
-    bairro:{
+    bairro: {
       type: DataTypes.STRING,
-    },
+    }
   },
   {
     tableName: "psicologos",

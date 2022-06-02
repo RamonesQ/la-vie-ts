@@ -1,8 +1,8 @@
 import { ViaCep } from "./ViaCep"
 
 describe('Via Cep', () => {
-    const viaCep = new ViaCep
-    const cepGenerico = '01001-000'
+    const viaCep = new ViaCep();
+    const cepGenerico = '01001000' 
     const expectedResponse = {
         "cep": "01001-000",
         "logradouro": "Praça da Sé",
@@ -16,13 +16,12 @@ describe('Via Cep', () => {
         "siafi": "7107"
     }
 
-    describe('metodo getAddress', () => {
-
-        test('deve ter a funcao address', () => {
+    describe('metodo getAddress()', () => {
+        test('deve ser do type function', () => {
             expect(typeof viaCep.getAddress).toBe('function')
-        })
+        }) 
 
-        test('deve retornar o endereco completo', async () => {
+        test('deve retornar o endereço completo', async () => {
             expect(await viaCep.getAddress(cepGenerico)).toEqual(expectedResponse)
         })
     })

@@ -12,7 +12,6 @@ export class ViaCep implements GeoApiInterface {
     }
 
     async getAddress(bodyValue: string) {
-        // this.api.get('ws/' + bodyValue + 'json/')
         let response = await this.api.get(`ws/${bodyValue}/json/`)
         return response.data
     }
